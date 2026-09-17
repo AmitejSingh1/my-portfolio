@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0e0d0b;
+  --bg-subtle: #141310;
+  --bg-card: #181613;
+  --bg-hover: #1f1d19;
+  --fg: #f4f0e8;
+  --fg-muted: #9c9689;
+  --fg-subtle: #686359;
+  --hair: #23211d;
+  --hair-strong: #36332c;
+  --accent: #e06f36;
+  --accent-hover: #f07e45;
+  --accent-subtle: rgba(224, 111, 54, 0.12);
+  --accent-ink: #ffd9c4;
+}
+
+@layer base {
+  * {
+    border-color: var(--hair);
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    background-color: var(--bg);
+    color: var(--fg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-feature-settings: "rlig" 1, "calt" 1;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: #ffffff;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--bg);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--hair-strong);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--fg-subtle);
+  }
+}
+
+/* Accessibility: Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Typography & Editorial Utility Classes */
+.editorial-container {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .editorial-container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .editorial-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.eyebrow-tag {
+  font-family: var(--font-jetbrains-mono, monospace);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.hairline-border {
+  border: 1px solid var(--hair);
+}
+
+.hairline-border-t {
+  border-top: 1px solid var(--hair);
+}
+
+.hairline-border-b {
+  border-bottom: 1px solid var(--hair);
+}
+
+.hairline-border-y {
+  border-top: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+}
+
+/* Interactive link with underline micro-interaction */
+.editorial-link {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  color: var(--fg);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.editorial-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--hair-strong);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  transform-origin: left;
+}
+
+.editorial-link:hover {
+  color: var(--accent);
+}
+
+.editorial-link:hover::after {
+  background-color: var(--accent);
+  transform: scaleX(1);
+}
+
+/* Primary CTA Button */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.84rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  border-radius: 2px;
+  background-color: var(--fg);
+  color: var(--bg);
+  border: 1px solid var(--fg);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.cta-button-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.84rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  border-radius: 2px;
+  background-color: transparent;
+  color: var(--fg);
+  border: 1px solid var(--hair-strong);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cta-button-ghost:hover {
+  border-color: var(--fg-muted);
+  color: #ffffff;
+  background-color: var(--bg-hover);
+  transform: translateY(-1px);
+}
+

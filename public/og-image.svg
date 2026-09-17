@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#0e0d0b"/>
+  <rect x="40" y="40" width="1120" height="550" rx="12" fill="none" stroke="#23211d" stroke-width="2"/>
+  
+  <!-- Subtle Grid Accent -->
+  <line x1="40" y1="140" x2="1160" y2="140" stroke="#1c1a17" stroke-width="1.5"/>
+  <line x1="40" y1="480" x2="1160" y2="480" stroke="#1c1a17" stroke-width="1.5"/>
+  <line x1="400" y1="480" x2="400" y2="590" stroke="#1c1a17" stroke-width="1.5"/>
+  <line x1="780" y1="480" x2="780" y2="590" stroke="#1c1a17" stroke-width="1.5"/>
+
+  <!-- Header metadata -->
+  <text x="80" y="105" font-family="monospace" font-size="16" fill="#e06f36" letter-spacing="2">01 / PORTFOLIO &amp; RESEARCH INDEX</text>
+  <text x="1120" y="105" font-family="monospace" font-size="16" fill="#9c9689" text-anchor="end">NUS SINGAPORE</text>
+
+  <!-- Main text -->
+  <text x="80" y="240" font-family="system-ui, -apple-system, sans-serif" font-size="58" font-weight="600" fill="#f4f0e8" letter-spacing="-1.5">Amitej Singh Datta</text>
+  <text x="80" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="400" fill="#e06f36">AI/ML Engineer · Vision &amp; Foundation Models</text>
+  <text x="80" y="360" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="300" fill="#9c9689">Parameter-Efficient Vision Adaptation · Forensic Detectors · Clinical Segmentation</text>
+
+  <!-- Bottom Metric Callouts -->
+  <text x="80" y="525" font-family="monospace" font-size="14" fill="#686359">PEER REVIEW</text>
+  <text x="80" y="555" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#f4f0e8">ICCIS 2025 (Springer)</text>
+
+  <text x="440" y="525" font-family="monospace" font-size="14" fill="#686359">MEDSAM LORA</text>
+  <text x="440" y="555" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#f4f0e8">95.7% Dice (+43.8pp)</text>
+
+  <text x="820" y="525" font-family="monospace" font-size="14" fill="#686359">EMPIRICAL BENCHMARK</text>
+  <text x="820" y="555" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#f4f0e8">661.7M EU DSA Records</text>
+</svg>
+
