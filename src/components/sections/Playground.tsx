@@ -39,8 +39,8 @@ export function Playground() {
           </a>
         </div>
 
-        {/* 5 Project Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Lab Projects Grid - 2x2 Balanced Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {labProjects.map((item: LabProject, idx) => (
             <article
               key={idx}

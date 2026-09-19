@@ -100,7 +100,7 @@ personal: {
 }
 ```
 
-### Adding or Updating a Selected Work Case Study
+### Adding or Updating a Featured Work Case Study
 Edit `portfolioData.featuredProjects`. Each project supports:
 - `id`, `number`, `title`, `subtitle`, `badge`
 - `problem` statement

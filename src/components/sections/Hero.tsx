@@ -3,10 +3,10 @@ import { ArrowDown, ArrowUpRight, FileText, BookOpen } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/icons/SocialIcons";
 
 export function Hero() {
-  const { personal, heroMetrics } = portfolioData;
+  const { personal } = portfolioData;
 
   return (
-    <section className="relative pt-12 pb-20 md:pt-20 md:pb-28 border-b border-hair">
+    <section className="relative pt-16 pb-20 md:pt-24 md:pb-28 border-b border-hair">
       <div className="editorial-container">
         {/* Live Status Eyebrow */}
         <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full border border-hair-strong bg-bg-card/70 text-xs font-mono text-fg-muted mb-8 md:mb-12">
@@ -32,9 +32,9 @@ export function Hero() {
           </p>
 
           {/* Action CTAs */}
-          <div className="flex flex-wrap items-center gap-4 mb-16">
+          <div className="flex flex-wrap items-center gap-4">
             <a href="#work" className="cta-button">
-              <span>Selected Work</span>
+              <span>Featured Work</span>
               <ArrowDown className="w-3.5 h-3.5" />
             </a>
 
@@ -82,28 +82,7 @@ export function Hero() {
             </div>
           </div>
         </div>
-
-        {/* Factual Metric Callouts Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 pt-10 border-t border-hair">
-          {heroMetrics.map((item, idx) => (
-            <div
-              key={idx}
-              className="p-5 rounded border border-hair bg-bg-card/40 hover:bg-bg-card/70 transition-colors"
-            >
-              <div className="font-mono text-2xl md:text-3xl font-medium tracking-tight text-fg mb-1">
-                {item.value}
-              </div>
-              <div className="font-mono text-[11px] uppercase tracking-mono text-accent mb-2">
-                {item.label}
-              </div>
-              <p className="text-xs text-fg-muted leading-relaxed">
-                {item.detail}
-              </p>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
 }
-

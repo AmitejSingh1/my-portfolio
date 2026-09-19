@@ -20,10 +20,10 @@ export function SelectedWork() {
 
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium tracking-tight text-fg">
-            Selected Work & Research
+            Featured Work
           </h2>
           <p className="text-sm text-fg-muted max-w-md">
-            Methodical systems built around foundation model adaptation, computer vision forensics, medical image segmentation, and empirical data benchmarking.
+            Projects across AI, computer vision, software engineering, and data systems.
           </p>
         </div>
 

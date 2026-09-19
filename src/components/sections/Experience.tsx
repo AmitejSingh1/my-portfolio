@@ -1,8 +1,8 @@
 import { portfolioData, ExperienceItem, EducationItem } from "@/data/portfolio";
-import { Briefcase, GraduationCap, Users } from "lucide-react";
+import { Briefcase, GraduationCap } from "lucide-react";
 
 export function Experience() {
-  const { experience, education, extracurricular } = portfolioData;
+  const { experience, education } = portfolioData;
 
   return (
     <section id="experience" className="py-20 md:py-28 border-b border-hair">
@@ -26,9 +26,9 @@ export function Experience() {
           </span>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left Column: Work Experience */}
-          <div className="lg:col-span-7 flex flex-col gap-8">
+          <div className="flex flex-col gap-8">
             <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-mono text-fg pb-4 border-b border-hair">
               <Briefcase className="w-4 h-4 text-accent" />
               <span>Work & Research Internships</span>
@@ -75,69 +75,42 @@ export function Experience() {
             </div>
           </div>
 
-          {/* Right Column: Education & Leadership */}
-          <div className="lg:col-span-5 flex flex-col gap-10">
-            {/* Education Block */}
-            <div>
-              <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-mono text-fg pb-4 border-b border-hair mb-6">
-                <GraduationCap className="w-4 h-4 text-accent" />
-                <span>Degrees & Institutions</span>
-              </div>
-
-              <div className="flex flex-col gap-8">
-                {education.map((edu: EducationItem, idx) => (
-                  <div key={idx} className="p-5 rounded border border-hair bg-bg-card/40">
-                    <div className="flex items-baseline justify-between gap-2 mb-1">
-                      <h4 className="text-base font-medium text-fg">
-                        {edu.degree}
-                      </h4>
-                      {edu.gpa && (
-                        <span className="font-mono text-xs font-medium px-2 py-0.5 rounded bg-accent-subtle text-accent border border-accent/20">
-                          GPA {edu.gpa}
-                        </span>
-                      )}
-                    </div>
-                    <div className="font-mono text-xs text-fg-muted mb-3">
-                      {edu.institution} · <span className="text-fg-subtle">{edu.location}</span>
-                    </div>
-                    <div className="font-mono text-[11px] text-fg-subtle mb-3">
-                      {edu.period}
-                    </div>
-                    <ul className="flex flex-col gap-1.5 text-xs text-fg-muted leading-relaxed">
-                      {edu.details.map((detail, i) => (
-                        <li key={i} className="flex items-start gap-2">
-                          <span className="text-accent shrink-0">›</span>
-                          <span>{detail}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
+          {/* Right Column: Education */}
+          <div className="flex flex-col gap-8">
+            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-mono text-fg pb-4 border-b border-hair">
+              <GraduationCap className="w-4 h-4 text-accent" />
+              <span>Degrees & Institutions</span>
             </div>
 
-            {/* Extracurricular / Community */}
-            <div>
-              <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-mono text-fg pb-4 border-b border-hair mb-6">
-                <Users className="w-4 h-4 text-accent" />
-                <span>Leadership & Volunteering</span>
-              </div>
-
-              <div className="flex flex-col gap-4">
-                {extracurricular.map((item, idx) => (
-                  <div key={idx} className="p-4 rounded border border-hair bg-bg-subtle/50 text-xs">
-                    <div className="font-medium text-fg mb-0.5">
-                      {item.role}
-                    </div>
-                    <div className="font-mono text-[11px] text-accent mb-1.5">
-                      {item.organization}
-                    </div>
-                    <p className="text-fg-muted leading-relaxed m-0">
-                      {item.description}
-                    </p>
+            <div className="flex flex-col gap-6">
+              {education.map((edu: EducationItem, idx) => (
+                <div key={idx} className="p-6 rounded border border-hair bg-bg-card/40 hover:bg-bg-card/70 transition-colors">
+                  <div className="flex items-baseline justify-between gap-2 mb-1.5">
+                    <h3 className="text-lg font-medium text-fg">
+                      {edu.degree}
+                    </h3>
+                    {edu.gpa && (
+                      <span className="font-mono text-xs font-medium px-2 py-0.5 rounded bg-accent-subtle text-accent border border-accent/20">
+                        GPA {edu.gpa}
+                      </span>
+                    )}
                   </div>
-                ))}
-              </div>
+                  <div className="font-mono text-xs text-accent mb-2">
+                    {edu.institution} · <span className="text-fg-muted">{edu.location}</span>
+                  </div>
+                  <div className="font-mono text-[11px] text-fg-subtle mb-4">
+                    {edu.period}
+                  </div>
+                  <ul className="flex flex-col gap-2 text-xs sm:text-sm text-fg-muted leading-relaxed">
+                    {edu.details.map((detail, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-accent shrink-0">›</span>
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -145,4 +118,3 @@ export function Experience() {
     </section>
   );
 }
-

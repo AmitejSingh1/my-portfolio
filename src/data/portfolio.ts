@@ -16,12 +16,6 @@ export interface PersonalInfo {
   bioParagraphs: string[];
 }
 
-export interface MetricHighlight {
-  label: string;
-  value: string;
-  detail: string;
-}
-
 export interface NowItem {
   category: string;
   title: string;
@@ -110,29 +104,6 @@ export const portfolioData = {
       "I prioritize methodical experimentation, verified benchmarks, and building reliable end-to-end software — taking systems from mathematical formulation to reproducible training pipelines and deployed applications.",
     ],
   } as PersonalInfo,
-
-  heroMetrics: [
-    {
-      value: "ICCIS 2025",
-      label: "First-Author Paper",
-      detail: "Accepted for publication in Springer Book Series",
-    },
-    {
-      value: "95.7%",
-      label: "MedSAM LoRA Dice",
-      detail: "+43.8pp over zero-shot with 82% fewer parameters",
-    },
-    {
-      value: "661.7M",
-      label: "Records Analyzed",
-      detail: "EU DSA content moderation transparency benchmark",
-    },
-    {
-      value: "9.09",
-      label: "Undergrad GPA",
-      detail: "B.Tech Computer Science (AI & ML) at VIT Chennai",
-    },
-  ] as MetricHighlight[],
 
   now: {
     sectionEyebrow: "01 / Now",
@@ -240,7 +211,7 @@ export const portfolioData = {
       number: "03",
       title: "Prostate Segmentation on Micro-Ultrasound",
       subtitle: "Hybrid VGG16-UNet Architecture for Automated Clinical Boundary Delineation",
-      badge: "Published Research · ICCIS 2025 (Springer)",
+      badge: "Published Research · ICCIS 2025 · Springer",
       problem:
         "Manual prostate boundary delineation in micro-ultrasound scans is labour-intensive, radiologist-dependent, and creates significant scheduling bottlenecks for targeted biopsy and radiation dosimetry.",
       architecture: [
@@ -301,20 +272,6 @@ export const portfolioData = {
       ],
       technologies: ["Python", "OpenCV", "MediaPipe", "WebSockets", "Android"],
       githubUrl: "https://github.com/AmitejSingh1/VisioLink",
-    },
-    {
-      title: "Pre-Reg Copilot",
-      category: "Multi-Agent System",
-      badge: "Hack4Health 2026",
-      description:
-        "Built a 3-agent FastAPI backend automating clinic pre-registration for Parkway Shenton staff, reducing document triage time from 25–30 min/patient down to seconds.",
-      highlights: [
-        "Agent 1 extracts structured JSON from unstructured chits and vouchers using Gemini Flash LLM.",
-        "Agents 2 & 3 execute deterministic rules-based patient identity matching and payer package resolution.",
-        "Auto-generates OpenAPI specs integrated directly with Microsoft Copilot Studio.",
-      ],
-      technologies: ["FastAPI", "Gemini Flash LLM", "Python", "Copilot Studio", "REST APIs"],
-      githubUrl: "https://github.com/AmitejSingh1/pre-reg-copilot",
     },
     {
       title: "LoRA From Scratch",
@@ -411,24 +368,6 @@ export const portfolioData = {
       ],
     },
   ] as EducationItem[],
-
-  extracurricular: [
-    {
-      role: "Culture Lead",
-      organization: "Fraternity of Young Innovators, VIT Chennai",
-      description: "Organized technical hackathons, workshops, and community culture for young engineers.",
-    },
-    {
-      role: "VIP GuestCare Head",
-      organization: "Voyage Tech Summit, VIT Chennai",
-      description: "Coordinated guest relations and speaker hospitality for college technology summits.",
-    },
-    {
-      role: "Volunteer",
-      organization: "Khalsa Aid & SOS Children's Villages",
-      description: "Participated in ground-level humanitarian assistance during Punjab flood relief operations.",
-    },
-  ],
 
   skillCategories: [
     {
